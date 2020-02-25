@@ -1,10 +1,10 @@
+module.exports = 
 function countCats(arr){
   let count=0;
   arr.forEach( line => {
-    typeof(element) != 'string' ? doNothing() : 
-    line.forEach (element => {element == "^^" ? count++ : count;
+    line.forEach (element => {element == "^^" ? count++ : doNothing() ;
     //console.log(element);
-  })
+    })
   });
   return count;
 }
@@ -12,6 +12,11 @@ function countCats(arr){
 function doNothing(){
 
 }
+/*
+let arr = [
+  ['##', 'dd', '00'],
+  ['^^', '..', 'ss'],
+  ['AA', 'dd', 'Oo'],
+]
 
-let arr=['aa', '##', false, NaN, 2, 3, '^ ^', undefined, 54, ' ^^'];
-console.log(countCats(arr))
+console.log(countCats(arr));*/

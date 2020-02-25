@@ -1,11 +1,14 @@
+module.exports = 
 function createDreamTeam(arr) {
   let dream=[];
-  arr.forEach(element => {typeof(element) != 'string' ? arr.indexOf(element, [0]) : doPush(dream, element)});
+  //console.log(typeof(arr));
+  //console.log(arr[0]);
+  if (typeof(arr) != 'object' || arr === null || arr.length==0 || arr[0] == undefined) return false;
+  arr.forEach(element => {typeof(element) != 'string' ? arr.indexOf(element, [0]) : doPush(dream, element)});  
   return dream.sort().join('');
 };
 
 function doNothing(){
-
 }
 
 function doPush(dream,element){
@@ -19,21 +22,22 @@ function doPush(dream,element){
     break;}
     firstSymbol = element[i].toUpperCase()
       return isNaN(parseInt(firstSymbol)) ? dream.push(firstSymbol) : doNothing() ; 
-}
-
-let team = [
-  ['David Abram'],
-  ['Robin Attfield'],
-  'Thomas Berry',
-  ['Paul R.Ehrlich'],
-  'donna Haraway',
-  ' BrIaN_gOodWiN  ',
-  {
-    0: 'Serenella Iovino'
-  },
-  'Erazim Kohak',
-  '  val_plumwood',
+}/*
+let g={'foo': 'bar'};
+let arr=[
+  '   William Alston ',
+  ' Paul Benacerraf',
+  '  Ross Cameron',
+  '       Gilles Deleuze',
+  '  Arda Denkel ',
+  '  Michael Devitt',
+  '  Kit Fine',
+  ' Nelson Goodman',
+  'David Kolb',
+  '   Saul Kripke',
+  '  Trenton Merricks',
+  '  Jay Rosenberg',
 ];
-                         
-let GLRD = ['GLRD'];
-console.log(createDreamTeam(team));
+
+console.log(createDreamTeam(g));
+*/
